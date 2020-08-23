@@ -63,6 +63,6 @@ If you want to use bash script to launch project
   * if works revert the changes above
 
 ## Proxy errors
-* Ensure backend and frontend are running
+* /Ensure backend and frontend are running
 * Go to `frontend/package.json`, and ensure that line 5 http://localhost:5000 if not runnning in docker. If running docker needs to be http://backend:5000
 * go to `frontend/src/chat/chat.js` and ensure that line 20 is http://localhost:5000 if not runnning in docker. If running docker needs to be http://backend:5000
