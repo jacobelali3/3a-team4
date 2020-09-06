@@ -8,7 +8,7 @@ class News extends Component {
   }
 
   render() {
-    return <div></div>;
+    return <div>News</div>;
   }
 }
 

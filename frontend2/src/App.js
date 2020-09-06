@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  withRouter,
+} from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -12,6 +18,8 @@ class App extends Component {
       },
     };
   }
+
+  componentDidMount() {}
 
   render() {
     return (
@@ -44,8 +52,7 @@ class App extends Component {
                       style={{ cursor: "pointer" }}
                       class="nav-link"
                       style={this.state.style_global_color}
-                      href="/Maps"
-
+                      href="/"
                     >
                       Maps
                     </a>
@@ -57,7 +64,6 @@ class App extends Component {
                       class="nav-link"
                       style={this.state.style_global_color}
                       href="/News"
-
                     >
                       News
                     </a>
@@ -80,14 +86,10 @@ class App extends Component {
           </nav>
         </div>
 
-        <div>
-
-
-
-        </div>
+        <div></div>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

@@ -3,7 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  withRouter,
+} from "react-router-dom";
 
 import Home from "./Home/Home";
 
@@ -13,13 +18,13 @@ import Maps from "./Map/Maps";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-
     <Router>
+      <App />
+
       <Switch>
-        <Route path="/Maps" component={Maps} />
-        <Route path="/News" component={News} />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Maps} />
+        <Route exact path="/News" component={News} />
+        <Route exact path="/Home" component={Home} />
       </Switch>
     </Router>
   </React.StrictMode>,
