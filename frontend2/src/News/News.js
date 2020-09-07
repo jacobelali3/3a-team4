@@ -11,8 +11,7 @@ class News extends Component {
 
   componentDidMount() {
     const url = 'http://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?' +
-    'q=covid 19&' +
-     'q=australia' +
+    'q=covid 19 sydney&' +
      'qInTitle=covid' +
     'from=2020-09-07&' +
     'sortBy=relevancy&' +
@@ -47,7 +46,7 @@ class News extends Component {
    <div> 
       
       <div> 
-      class="header" height: "50"
+      
       <h1>Today's COVID News </h1>
       </div>
 

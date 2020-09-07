@@ -1,0 +1,13 @@
+*{
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+}
+.container{
+
+    text-align: center;
+    position: fixed;
+}
