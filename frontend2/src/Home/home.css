@@ -1,0 +1,49 @@
+.header h1, .second-text h3 {
+    text-align: center;
+    color: rgb(0, 0, 128);
+    font-weight: bold;
+}
+
+.home-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 80px;
+}
+
+.home-col {
+    flex: 0 23%;
+    height: 200px;
+    background: #f4f7ff;
+    margin: 8px;
+    text-align: center;
+}
+
+.home-col img{
+    margin: 40px 0 15px;
+}
+
+.home-col p {
+    font-weight: bold;
+    color: rgba(0, 17, 103, 1);
+}
+
+.arrow {
+    margin: 0 !important;
+}
+
+.second {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 80px;
+}
+
+.second-image {
+    margin: 8px;
+    flex: 0 40%;
+}
+
+.second-text {
+    flex: 0 55%;
+    margin-top: 120px;
+}
+
