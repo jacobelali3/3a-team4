@@ -23,11 +23,19 @@ class News extends Component {
        data.articles.forEach(article =>{
            let li = document.createElement('li');
            let a = document.createElement('a');
+           let b = document.createElement('img');
            a.setAttribute('href', article.url);
            a.setAttribute('target', '_blank')
+           b.setAttribute('src', article.urlToImage);
+           b.setAttribute('alt', 's');
+           b.setAttribute('width', '100');
+           b.setAttribute('height', '100');
+           b.setAttribute('class', 'centre');
            a.textContent = article.title;
            li.appendChild(a);
+           li.appendChild(b);
            newsList.appendChild(li);
+           
            /*var img = new Image(); 
            img.setAttribute('href', article.url);
             img.src =  article.urlToImage; 
