@@ -25,6 +25,7 @@ class News extends Component {
            let a = document.createElement('h5');
            let b = document.createElement('img');
            let c = document.createElement('p');
+           let d = document.createElement('hr');
            a.setAttribute('href', article.url);
            a.setAttribute('target', '_blank')
            b.setAttribute('src', article.urlToImage);
@@ -41,6 +42,7 @@ class News extends Component {
            newsList.appendChild(li);
            newsList.appendChild(b);
            newsList.appendChild(c);
+           newsList.appendChild(d);
            /*var img = new Image(); 
            img.setAttribute('href', article.url);
             img.src =  article.urlToImage; 
