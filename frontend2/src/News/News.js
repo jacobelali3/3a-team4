@@ -22,20 +22,25 @@ class News extends Component {
     .then((response)=> {return response.json()}).then((data)=>{console.log(data)
        data.articles.forEach(article =>{
            let li = document.createElement('li');
-           let a = document.createElement('a');
+           let a = document.createElement('h5');
            let b = document.createElement('img');
+           let c = document.createElement('p');
            a.setAttribute('href', article.url);
            a.setAttribute('target', '_blank')
            b.setAttribute('src', article.urlToImage);
            b.setAttribute('alt', 's');
-           b.setAttribute('width', '100');
-           b.setAttribute('height', '100');
-           b.setAttribute('class', 'centre');
-           a.textContent = article.title;
-           li.appendChild(a);
-           li.appendChild(b);
-           newsList.appendChild(li);
+           b.setAttribute('width', '400');
+           b.setAttribute('height', '200');
            
+           a.textContent = article.title;
+           c.textContent = article.description
+           li.appendChild(a);
+          
+           
+           
+           newsList.appendChild(li);
+           newsList.appendChild(b);
+           newsList.appendChild(c);
            /*var img = new Image(); 
            img.setAttribute('href', article.url);
             img.src =  article.urlToImage; 
@@ -55,9 +60,14 @@ class News extends Component {
       
       <div> 
       
+
+
+
+
+
       <h1>Today's COVID News </h1>
       </div>
-
+      
       <div 
       class="container"> 
       <ul class="news-list"></ul>

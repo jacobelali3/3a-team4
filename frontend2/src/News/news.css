@@ -4,10 +4,11 @@
 }
 
 .header {
-    text-align: center;
+    
+    position:  top;
 }
 .container{
 
     text-align: center;
-    position: fixed;
+    position: sticky;
 }

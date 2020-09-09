@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -34,7 +33,7 @@ class App extends Component {
               <div
                 class="collapse navbar-collapse"
                 id="navbarResponsive1"
-                style={{ width: "100%", "flex-grow": "0" }}
+                style={{ width: "100%", "flexGrow": "0" }}
               >
                 <ul class="navbar-nav">
                   <li class="nav-item">
@@ -57,10 +56,27 @@ class App extends Component {
                       Maps
                     </a>
                   </li>
-
                   <li style={{ cursor: "pointer" }} class="nav-item">
                     <a
                       style={{ cursor: "pointer" }}
+                      class="nav-link"
+                      style={this.state.style_global_color}
+                      href="/"
+                    >
+                      Maps
+                    </a>
+                  </li> <li style={{ cursor: "pointer" }} class="nav-item">
+                    <a
+                      style={{ cursor: "pointer" }}
+                      class="nav-link"
+                      style={this.state.style_global_color}
+                      href="/table.html"
+                    >
+                      Table
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
                       class="nav-link"
                       style={this.state.style_global_color}
                       href="/News"
