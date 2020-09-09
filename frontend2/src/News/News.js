@@ -25,7 +25,7 @@ class News extends Component {
     .then((response)=> {return response.json()}).then((data)=>{console.log(data)
        data.articles.forEach(article =>{
            let li = document.createElement('li');
-           let a = document.createElement('h5');
+           let a = document.createElement('a');
            let b = document.createElement('img');
            let c = document.createElement('p');
            let d = document.createElement('hr');
@@ -65,11 +65,6 @@ class News extends Component {
       
       <div> 
       
-
-
-
-
-
       <h1>Today's COVID News </h1>
       </div>
       
