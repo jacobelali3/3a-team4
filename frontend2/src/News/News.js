@@ -11,10 +11,11 @@ class News extends Component {
 
   componentDidMount() {
     const url = 'http://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?' +
-    'q=covid 19 sydney&' +
-     'qInTitle=covid' +
-    'from=2020-09-07&' +
-    'sortBy=relevancy&' +
+    'qInTitle="covid" AND ("australia" OR "Sydney" OR "nsw" OR "victoria")&' +
+    'from=2020-09-01&' +
+    'sortBy=publishedAt&' +
+    'source=au&' +
+    'language=en&' +
     'apiKey=93fa47f73b0544e2a927b0a0d8d6db98';
     const req = new Request(url);
     const newsList = document.querySelector('.news-list');
@@ -29,7 +30,7 @@ class News extends Component {
            a.setAttribute('href', article.url);
            a.setAttribute('target', '_blank')
            b.setAttribute('src', article.urlToImage);
-           b.setAttribute('alt', 's');
+           b.setAttribute('alt', '');
            b.setAttribute('width', '400');
            b.setAttribute('height', '200');
            
