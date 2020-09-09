@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 import "./news.css";
-
+import moment from "moment";
 class News extends Component {
   constructor(props) {
     super(props);
@@ -10,9 +10,11 @@ class News extends Component {
   
 
   componentDidMount() {
+     var date = moment().subtract(7, 'days').format('YYYY-M-D')
+     
     const url = 'http://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?' +
     'qInTitle="covid" AND ("australia" OR "Sydney" OR "nsw" OR "victoria")&' +
-    'from=2020-09-01&' +
+    'from=' + date + '&'+
     'sortBy=publishedAt&' +
     'source=au&' +
     'language=en&' +
