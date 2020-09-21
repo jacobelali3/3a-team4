@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-
+import "table.css";
 
 
 class Table extends Component {
@@ -37,10 +37,13 @@ class Table extends Component {
 }
     render(){
        return(
+           <div>
+               <h1>Table</h1>
         <div 
         class="container"> 
         <ul class="table-list"></ul>
         
+        </div>
         </div>
        );
       }
