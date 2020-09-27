@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Map, GoogleApiWrapper } from "google-maps-react";
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
 
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -8,6 +8,8 @@ import TextField from "@material-ui/core/TextField";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
+import CircularProgress from "@material-ui/core/CircularProgress";
+
 const mapStyles = {
   width: "100%",
   height: "100%",
@@ -17,11 +19,56 @@ const mapStyles = {
 class Maps extends Component {
   constructor(props) {
     super(props);
-    this.state = { distance: 0 };
+    this.state = {
+      distance: 0,
+      currentLatLng: {
+        lat: 0,
+        lng: 0,
+      },
+      readyMap: false,
+    };
+  }
+
+  componentDidMount() {
+    this.delayedShowMarker();
+  }
+
+  componentWillUpdate() {
+    this.getGeoLocation();
   }
 
   handleChange = (event) => {
     this.setState({ distance: event.target.value });
+  };
+
+  delayedShowMarker = () => {
+    setTimeout(() => {
+      this.getGeoLocation();
+    }, 5000);
+  };
+
+  getGeoLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          console.log(position.coords);
+          this.setState((prevState) => ({
+            currentLatLng: {
+              ...prevState.currentLatLng,
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            },
+            readyMap: true,
+          }));
+        },
+        function error(msg) {
+          alert(msg);
+          this.setState({ readyMap: true });
+        },
+        { enableHighAccuracy: true }
+      );
+    } else {
+    }
   };
 
   render() {
@@ -56,7 +103,12 @@ class Maps extends Component {
             />
           </Grid>
 
-          <Grid item xs={12} md={3} style={{alignItems:"center", display:"flex"}}>
+          <Grid
+            item
+            xs={12}
+            md={3}
+            style={{ alignItems: "center", display: "flex" }}
+          >
             <Button variant="contained" color="primary">
               Report Covid Case
             </Button>
@@ -89,7 +141,12 @@ class Maps extends Component {
             </Select>
           </Grid>
 
-          <Grid item xs={12} md={3}style={{alignItems:"flex-end", display:"flex"}}>
+          <Grid
+            item
+            xs={12}
+            md={3}
+            style={{ alignItems: "flex-end", display: "flex" }}
+          >
             <Button variant="contained" color="primary">
               Filter
             </Button>
@@ -97,12 +154,37 @@ class Maps extends Component {
         </Grid>
 
         <div>
-          <Map
-            google={this.props.google}
-            zoom={8}
-            style={mapStyles}
-            initialCenter={{ lat: 47.444, lng: -122.176 }}
-          />
+          {this.state.readyMap ? (
+            <Map
+              google={this.props.google}
+              zoom={15}
+              style={mapStyles}
+              initialCenter={{
+                lat: this.state.currentLatLng.lat,
+                lng: this.state.currentLatLng.lng,
+              }}
+            >
+              <Marker
+                title={"The marker`s title will appear as a tooltip."}
+                name={"SOMA"}
+                position={this.state.currentLatLng}
+              />
+
+              <InfoWindow position={this.state.currentLatLng} visible>
+                <small>Current Location </small>
+              </InfoWindow>
+            </Map>
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <CircularProgress />
+            </div>
+          )}
         </div>
       </div>
     );
