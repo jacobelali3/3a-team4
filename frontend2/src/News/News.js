@@ -134,7 +134,8 @@ class News extends Component {
 									<Button
 										size="small"
 										color="primary"
-										onClick={() => window.open(item.link)}
+										target="_blank"
+										href={item.link}
 									>
 										Learn More
 									</Button>
