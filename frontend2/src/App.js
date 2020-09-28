@@ -1,6 +1,11 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  withRouter,
+} from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -8,10 +13,12 @@ class App extends Component {
     this.state = {
       login_status: false,
       style_global_color: {
-        color: "#61b329",
+        color: "#FFFFFF",
       },
     };
   }
+
+  componentDidMount() {}
 
   render() {
     return (
@@ -20,20 +27,20 @@ class App extends Component {
           <nav
             class="navbar navbar-expand-lg fixed-top navbar-light"
             id="mainNav"
-            style={{ backgroundColor: "#FFFFFF" }}
+            style={{ backgroundColor: "#000080" }}
           >
             <div class="container">
               <div
                 class="collapse navbar-collapse"
                 id="navbarResponsive1"
-                style={{ width: "100%", "flex-grow": "0" }}
+                style={{ width: "100%", "flexGrow": "0" }}
               >
                 <ul class="navbar-nav">
                   <li class="nav-item">
                     <a
                       class="nav-link"
                       style={this.state.style_global_color}
-                      href="/"
+                      href="/Home"
                     >
                       Home
                     </a>
@@ -44,16 +51,35 @@ class App extends Component {
                       style={{ cursor: "pointer" }}
                       class="nav-link"
                       style={this.state.style_global_color}
+                      href="/"
                     >
                       Maps
                     </a>
                   </li>
-
                   <li style={{ cursor: "pointer" }} class="nav-item">
                     <a
                       style={{ cursor: "pointer" }}
                       class="nav-link"
                       style={this.state.style_global_color}
+                      href="/"
+                    >
+                      Maps
+                    </a>
+                  </li> <li style={{ cursor: "pointer" }} class="nav-item">
+                    <a
+                      style={{ cursor: "pointer" }}
+                      class="nav-link"
+                      style={this.state.style_global_color}
+                      href="/table.html"
+                    >
+                      Table
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      style={this.state.style_global_color}
+                      href="/News"
                     >
                       News
                     </a>
@@ -61,7 +87,6 @@ class App extends Component {
                 </ul>
               </div>
 
-            
               <button
                 class="navbar-toggler navbar-toggler-right"
                 type="button"
@@ -77,25 +102,10 @@ class App extends Component {
           </nav>
         </div>
 
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-        </div>
+        <div></div>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
