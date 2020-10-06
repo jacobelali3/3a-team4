@@ -1,0 +1,213 @@
+2020-06-03 19:46:38,860 - INFO - Server initialized for gevent.
+2020-06-03 19:46:39,255 - INFO -  * Restarting with stat
+2020-06-03 19:46:40,139 - INFO - Server initialized for gevent.
+2020-06-03 19:46:40,389 - WARNING -  * Debugger is active!
+2020-06-03 19:46:40,393 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 20:09:12,496 - INFO - Server initialized for gevent.
+2020-06-03 20:09:12,862 - INFO -  * Restarting with stat
+2020-06-03 20:09:13,641 - INFO - Server initialized for gevent.
+2020-06-03 20:09:13,863 - WARNING -  * Debugger is active!
+2020-06-03 20:09:13,868 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 20:12:20,002 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet OPEN data {'sid': 'faa228b9c8a7490b9e60b2293286b152', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-06-03 20:12:20,003 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet MESSAGE data 0
+2020-06-03 20:12:24,857 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet OPEN data {'sid': '09f91619138c4c62b0826734ef0e6e8d', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-06-03 20:12:24,858 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet MESSAGE data 0
+2020-06-03 20:12:45,346 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:12:45,346 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:12:49,888 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:12:49,888 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:13:11,325 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:13:11,325 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:13:15,319 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:13:15,319 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:13:37,352 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:13:37,353 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:13:41,307 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:13:41,308 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:14:03,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:14:03,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:14:07,350 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:14:07,351 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:14:29,332 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:14:29,333 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:14:33,308 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:14:33,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:14:55,343 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:14:55,343 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:14:59,322 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:14:59,322 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:15:21,322 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:15:21,322 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:15:25,317 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:15:25,318 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:15:47,323 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:15:47,324 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:15:51,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:15:51,310 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:16:13,348 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:16:13,348 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:16:16,340 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:16:16,340 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:16:39,327 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:16:39,327 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:16:42,314 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:16:42,314 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:17:05,345 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:17:05,346 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:17:08,308 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:17:08,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:17:31,352 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:17:31,352 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:17:34,334 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:17:34,335 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:17:57,324 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:17:57,325 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:18:00,310 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:18:00,310 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:18:23,322 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:18:23,323 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:18:26,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:18:26,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:18:49,339 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:18:49,340 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:18:52,322 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:18:52,323 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:19:15,343 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:19:15,343 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:19:18,307 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:19:18,308 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:19:41,327 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:19:41,327 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:19:44,352 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:19:44,353 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:20:07,358 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:20:07,358 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:20:10,321 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:20:10,322 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:20:33,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:20:33,327 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:20:36,311 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:20:36,312 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:20:59,325 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:20:59,330 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:21:02,308 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:21:02,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:21:25,344 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:21:25,345 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:21:28,345 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:21:28,345 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:21:51,404 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:21:51,405 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:21:54,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:21:54,310 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:22:17,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:22:17,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:22:19,396 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:22:19,397 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:22:43,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:22:43,327 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:22:45,311 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:22:45,311 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:23:09,327 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:23:09,328 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:23:11,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:23:11,310 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:23:35,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:23:35,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:23:37,311 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:23:37,312 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:24:01,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:24:01,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:24:03,311 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:24:03,312 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:24:27,338 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:24:27,338 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:24:28,354 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:24:28,354 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:24:53,362 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:24:53,362 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:24:54,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:24:54,309 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:25:19,325 - INFO - faa228b9c8a7490b9e60b2293286b152: Received packet PING data None
+2020-06-03 20:25:19,326 - INFO - faa228b9c8a7490b9e60b2293286b152: Sending packet PONG data None
+2020-06-03 20:25:20,330 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Received packet PING data None
+2020-06-03 20:25:20,330 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Sending packet PONG data None
+2020-06-03 20:25:52,191 - INFO - ae5daf7d325447b8a763b80eda26f21c: Sending packet OPEN data {'sid': 'ae5daf7d325447b8a763b80eda26f21c', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-06-03 20:25:52,192 - INFO - ae5daf7d325447b8a763b80eda26f21c: Sending packet MESSAGE data 0
+2020-06-03 20:26:17,517 - INFO - ae5daf7d325447b8a763b80eda26f21c: Received packet PING data None
+2020-06-03 20:26:17,517 - INFO - ae5daf7d325447b8a763b80eda26f21c: Sending packet PONG data None
+2020-06-03 20:26:19,349 - INFO - faa228b9c8a7490b9e60b2293286b152: Client is gone, closing socket
+2020-06-03 20:26:20,123 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Client is gone, closing socket
+2020-06-03 20:26:20,124 - INFO - 09f91619138c4c62b0826734ef0e6e8d: Client is gone, closing socket
+2020-06-03 20:26:42,736 - INFO - ae5daf7d325447b8a763b80eda26f21c: Received packet PING data None
+2020-06-03 20:26:42,737 - INFO - ae5daf7d325447b8a763b80eda26f21c: Sending packet PONG data None
+2020-06-03 20:27:07,765 - INFO - ae5daf7d325447b8a763b80eda26f21c: Received packet PING data None
+2020-06-03 20:27:07,765 - INFO - ae5daf7d325447b8a763b80eda26f21c: Sending packet PONG data None
+2020-06-03 20:27:33,330 - INFO - ae5daf7d325447b8a763b80eda26f21c: Received packet PING data None
+2020-06-03 20:27:33,330 - INFO - ae5daf7d325447b8a763b80eda26f21c: Sending packet PONG data None
+2020-06-03 20:27:59,325 - INFO - ae5daf7d325447b8a763b80eda26f21c: Received packet PING data None
+2020-06-03 20:27:59,325 - INFO - ae5daf7d325447b8a763b80eda26f21c: Sending packet PONG data None
+2020-06-03 20:28:59,340 - INFO - ae5daf7d325447b8a763b80eda26f21c: Client is gone, closing socket
+2020-06-03 20:29:13,271 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\views.py', reloading
+2020-06-03 20:29:13,362 - INFO -  * Restarting with stat
+2020-06-03 20:29:14,151 - INFO - Server initialized for gevent.
+2020-06-03 20:29:14,410 - WARNING -  * Debugger is active!
+2020-06-03 20:29:14,414 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 20:32:05,990 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\views.py', reloading
+2020-06-03 20:32:06,045 - INFO -  * Restarting with stat
+2020-06-03 20:32:06,852 - INFO - Server initialized for gevent.
+2020-06-03 20:32:07,083 - WARNING -  * Debugger is active!
+2020-06-03 20:32:07,089 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 20:35:31,897 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\schemas.py', reloading
+2020-06-03 20:35:31,959 - INFO -  * Restarting with stat
+2020-06-03 20:35:32,814 - INFO - Server initialized for gevent.
+2020-06-03 20:35:33,052 - WARNING -  * Debugger is active!
+2020-06-03 20:35:33,057 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 20:39:07,731 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\models.py', reloading
+2020-06-03 20:39:07,798 - INFO -  * Restarting with stat
+2020-06-03 20:39:08,688 - INFO - Server initialized for gevent.
+2020-06-03 20:39:08,964 - WARNING -  * Debugger is active!
+2020-06-03 20:39:08,969 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 20:56:05,612 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-06-03 20:56:05,666 - INFO -  * Restarting with stat
+2020-06-03 20:56:06,665 - INFO - Server initialized for gevent.
+2020-06-03 20:56:06,909 - WARNING -  * Debugger is active!
+2020-06-03 20:56:06,914 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 20:56:25,414 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\models.py', reloading
+2020-06-03 20:56:25,470 - INFO -  * Restarting with stat
+2020-06-03 20:56:26,449 - INFO - Server initialized for gevent.
+2020-06-03 20:56:26,699 - WARNING -  * Debugger is active!
+2020-06-03 20:56:26,704 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 20:56:35,511 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\__init__.py', reloading
+2020-06-03 20:56:35,572 - INFO -  * Restarting with stat
+2020-06-03 20:56:36,468 - INFO - Server initialized for gevent.
+2020-06-03 20:56:36,689 - WARNING -  * Debugger is active!
+2020-06-03 20:56:36,693 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 21:00:37,665 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\__init__.py', reloading
+2020-06-03 21:00:37,719 - INFO -  * Restarting with stat
+2020-06-03 21:00:38,721 - INFO - Server initialized for gevent.
+2020-06-03 21:00:38,966 - WARNING -  * Debugger is active!
+2020-06-03 21:00:38,971 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 21:00:41,295 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\__init__.py', reloading
+2020-06-03 21:00:41,387 - INFO -  * Restarting with stat
+2020-06-03 21:00:42,127 - INFO - Server initialized for gevent.
+2020-06-03 21:00:42,365 - WARNING -  * Debugger is active!
+2020-06-03 21:00:42,370 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 21:07:56,930 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\models.py', reloading
+2020-06-03 21:07:56,996 - INFO -  * Restarting with stat
+2020-06-03 21:07:58,097 - INFO - Server initialized for gevent.
+2020-06-03 21:07:58,392 - WARNING -  * Debugger is active!
+2020-06-03 21:07:58,397 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 21:08:02,858 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\__init__.py', reloading
+2020-06-03 21:08:02,921 - INFO -  * Restarting with stat
+2020-06-03 21:08:03,916 - INFO - Server initialized for gevent.
+2020-06-03 21:08:04,183 - WARNING -  * Debugger is active!
+2020-06-03 21:08:04,188 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 21:08:09,771 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\__init__.py', reloading
+2020-06-03 21:08:09,835 - INFO -  * Restarting with stat
+2020-06-03 21:08:10,809 - INFO - Server initialized for gevent.
+2020-06-03 21:08:11,073 - WARNING -  * Debugger is active!
+2020-06-03 21:08:11,077 - INFO -  * Debugger PIN: 255-644-569
+2020-06-03 21:08:14,479 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\__init__.py', reloading
+2020-06-03 21:08:14,536 - INFO -  * Restarting with stat
+2020-06-03 21:08:15,441 - INFO - Server initialized for gevent.

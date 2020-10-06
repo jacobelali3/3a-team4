@@ -1,0 +1,236 @@
+2020-05-28 14:29:13,464 - INFO - Server initialized for gevent.
+2020-05-28 14:29:13,965 - INFO -  * Restarting with stat
+2020-05-28 14:29:14,709 - INFO - Server initialized for gevent.
+2020-05-28 14:29:14,936 - WARNING -  * Debugger is active!
+2020-05-28 14:29:14,941 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 14:29:51,944 - INFO - e6209e25d18442eab9726ac7f7608fc4: Sending packet OPEN data {'sid': 'e6209e25d18442eab9726ac7f7608fc4', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-05-28 14:29:51,945 - INFO - e6209e25d18442eab9726ac7f7608fc4: Sending packet MESSAGE data 0
+2020-05-28 14:30:03,156 - INFO - 4b4097ebd4cc438999639492856f6bed: Sending packet OPEN data {'sid': '4b4097ebd4cc438999639492856f6bed', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-05-28 14:30:03,157 - INFO - 4b4097ebd4cc438999639492856f6bed: Sending packet MESSAGE data 0
+2020-05-28 14:30:17,349 - INFO - e6209e25d18442eab9726ac7f7608fc4: Received packet PING data None
+2020-05-28 14:30:17,350 - INFO - e6209e25d18442eab9726ac7f7608fc4: Sending packet PONG data None
+2020-05-28 14:30:29,038 - INFO - 4b4097ebd4cc438999639492856f6bed: Received packet PING data None
+2020-05-28 14:30:29,038 - INFO - 4b4097ebd4cc438999639492856f6bed: Sending packet PONG data None
+2020-05-28 14:30:42,374 - INFO - e6209e25d18442eab9726ac7f7608fc4: Received packet PING data None
+2020-05-28 14:30:42,374 - INFO - e6209e25d18442eab9726ac7f7608fc4: Sending packet PONG data None
+2020-05-28 14:30:54,408 - INFO - 4b4097ebd4cc438999639492856f6bed: Received packet PING data None
+2020-05-28 14:30:54,409 - INFO - 4b4097ebd4cc438999639492856f6bed: Sending packet PONG data None
+2020-05-28 14:31:07,397 - INFO - e6209e25d18442eab9726ac7f7608fc4: Received packet PING data None
+2020-05-28 14:31:07,397 - INFO - e6209e25d18442eab9726ac7f7608fc4: Sending packet PONG data None
+2020-05-28 14:31:51,947 - INFO - e6209e25d18442eab9726ac7f7608fc4: Client is gone, closing socket
+2020-05-28 14:31:51,948 - INFO - e6209e25d18442eab9726ac7f7608fc4: Client is gone, closing socket
+2020-05-28 14:31:54,419 - INFO - 4b4097ebd4cc438999639492856f6bed: Client is gone, closing socket
+2020-05-28 14:40:41,394 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet OPEN data {'sid': '67d99b22916148c4b595cfa69a3a753f', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-05-28 14:40:41,395 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet MESSAGE data 0
+2020-05-28 14:40:44,318 - INFO - emitting event "roomCreated" to all [/]
+2020-05-28 14:40:44,318 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet MESSAGE data 2["roomCreated"]
+2020-05-28 14:40:45,444 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet MESSAGE data 2["join",{"username":"Wren Fajardo","userid":"5","room":"2"}]
+2020-05-28 14:40:45,445 - INFO - received event "join" from 67d99b22916148c4b595cfa69a3a753f [/]
+2020-05-28 14:40:45,446 - INFO - 67d99b22916148c4b595cfa69a3a753f is entering room 2 [/]
+2020-05-28 14:40:45,447 - INFO - emitting event "message" to 2 [/]
+2020-05-28 14:40:45,447 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet MESSAGE data 2["message","Wren Fajardo has entered the room: 2"]
+2020-05-28 14:40:45,447 - INFO - emitting event "success" to 2 [/]
+2020-05-28 14:40:45,448 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet MESSAGE data 2["success",{"userid":"5"}]
+2020-05-28 14:40:52,693 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet MESSAGE data 2["leave",{"username":"Wren Fajardo","userid":"5","room":"2"}]
+2020-05-28 14:40:52,693 - INFO - received event "leave" from 67d99b22916148c4b595cfa69a3a753f [/]
+2020-05-28 14:40:52,694 - INFO - 67d99b22916148c4b595cfa69a3a753f is leaving room 2 [/]
+2020-05-28 14:40:52,695 - INFO - emitting event "message" to 2 [/]
+2020-05-28 14:40:52,704 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet MESSAGE data 2["join",{"username":"Wren Fajardo","userid":"5","room":"1"}]
+2020-05-28 14:40:52,704 - INFO - received event "join" from 67d99b22916148c4b595cfa69a3a753f [/]
+2020-05-28 14:40:52,705 - INFO - 67d99b22916148c4b595cfa69a3a753f is entering room 1 [/]
+2020-05-28 14:40:52,706 - INFO - emitting event "message" to 1 [/]
+2020-05-28 14:40:52,706 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet MESSAGE data 2["message","Wren Fajardo has entered the room: 1"]
+2020-05-28 14:40:52,706 - INFO - emitting event "success" to 1 [/]
+2020-05-28 14:40:52,707 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet MESSAGE data 2["success",{"userid":"5"}]
+2020-05-28 14:40:53,575 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet MESSAGE data 2["leave",{"username":"Wren Fajardo","userid":"5","room":"1"}]
+2020-05-28 14:40:53,576 - INFO - received event "leave" from 67d99b22916148c4b595cfa69a3a753f [/]
+2020-05-28 14:40:53,577 - INFO - 67d99b22916148c4b595cfa69a3a753f is leaving room 1 [/]
+2020-05-28 14:40:53,577 - INFO - emitting event "message" to 1 [/]
+2020-05-28 14:40:53,585 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet MESSAGE data 2["join",{"username":"Wren Fajardo","userid":"5","room":"2"}]
+2020-05-28 14:40:53,585 - INFO - received event "join" from 67d99b22916148c4b595cfa69a3a753f [/]
+2020-05-28 14:40:53,587 - INFO - 67d99b22916148c4b595cfa69a3a753f is entering room 2 [/]
+2020-05-28 14:40:53,587 - INFO - emitting event "message" to 2 [/]
+2020-05-28 14:40:53,587 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet MESSAGE data 2["message","Wren Fajardo has entered the room: 2"]
+2020-05-28 14:40:53,588 - INFO - emitting event "success" to 2 [/]
+2020-05-28 14:40:53,588 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet MESSAGE data 2["success",{"userid":"5"}]
+2020-05-28 14:41:07,046 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:41:07,046 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:41:33,036 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:41:33,037 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:41:58,056 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:41:58,056 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:42:23,079 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:42:23,079 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:42:49,031 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:42:49,032 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:43:15,058 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:43:15,059 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:43:41,037 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:43:41,037 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:44:07,035 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:44:07,035 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:44:33,038 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:44:33,039 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:44:59,036 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:44:59,036 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:45:25,039 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:45:25,040 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:45:51,044 - INFO - 67d99b22916148c4b595cfa69a3a753f: Received packet PING data None
+2020-05-28 14:45:51,044 - INFO - 67d99b22916148c4b595cfa69a3a753f: Sending packet PONG data None
+2020-05-28 14:46:51,059 - INFO - 67d99b22916148c4b595cfa69a3a753f: Client is gone, closing socket
+2020-05-28 15:15:34,907 - INFO - 7213edcde8164128968e5b585c523626: Sending packet OPEN data {'sid': '7213edcde8164128968e5b585c523626', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-05-28 15:15:34,907 - INFO - 7213edcde8164128968e5b585c523626: Sending packet MESSAGE data 0
+2020-05-28 15:16:00,342 - INFO - 7213edcde8164128968e5b585c523626: Received packet PING data None
+2020-05-28 15:16:00,343 - INFO - 7213edcde8164128968e5b585c523626: Sending packet PONG data None
+2020-05-28 15:16:26,037 - INFO - 7213edcde8164128968e5b585c523626: Received packet PING data None
+2020-05-28 15:16:26,038 - INFO - 7213edcde8164128968e5b585c523626: Sending packet PONG data None
+2020-05-28 15:17:26,048 - INFO - 7213edcde8164128968e5b585c523626: Client is gone, closing socket
+2020-05-28 15:31:39,056 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet OPEN data {'sid': 'c20fedc9a745442c9793e2fc64480806', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-05-28 15:31:39,057 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 0
+2020-05-28 15:31:40,886 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet MESSAGE data 2["join",{"username":"Wren Fajardo","userid":"5","room":"1"}]
+2020-05-28 15:31:40,886 - INFO - received event "join" from c20fedc9a745442c9793e2fc64480806 [/]
+2020-05-28 15:31:40,888 - INFO - c20fedc9a745442c9793e2fc64480806 is entering room 1 [/]
+2020-05-28 15:31:40,888 - INFO - emitting event "message" to 1 [/]
+2020-05-28 15:31:40,888 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["message","Wren Fajardo has entered the room: 1"]
+2020-05-28 15:31:40,889 - INFO - emitting event "success" to 1 [/]
+2020-05-28 15:31:40,889 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["success",{"userid":"5"}]
+2020-05-28 15:31:43,665 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet MESSAGE data 2["leave",{"username":"Wren Fajardo","userid":"5","room":"1"}]
+2020-05-28 15:31:43,666 - INFO - received event "leave" from c20fedc9a745442c9793e2fc64480806 [/]
+2020-05-28 15:31:43,667 - INFO - c20fedc9a745442c9793e2fc64480806 is leaving room 1 [/]
+2020-05-28 15:31:43,667 - INFO - emitting event "message" to 1 [/]
+2020-05-28 15:31:43,673 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet MESSAGE data 2["join",{"username":"Wren Fajardo","userid":"5","room":"2"}]
+2020-05-28 15:31:43,674 - INFO - received event "join" from c20fedc9a745442c9793e2fc64480806 [/]
+2020-05-28 15:31:43,675 - INFO - c20fedc9a745442c9793e2fc64480806 is entering room 2 [/]
+2020-05-28 15:31:43,675 - INFO - emitting event "message" to 2 [/]
+2020-05-28 15:31:43,676 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["message","Wren Fajardo has entered the room: 2"]
+2020-05-28 15:31:43,676 - INFO - emitting event "success" to 2 [/]
+2020-05-28 15:31:43,676 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["success",{"userid":"5"}]
+2020-05-28 15:31:52,386 - INFO - emitting event "successRoom" to all [/]
+2020-05-28 15:31:52,386 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["successRoom",{"userid":[2,5],"method":"edit"}]
+2020-05-28 15:31:56,169 - INFO - room Wren Fajardo, John is closing [/]
+2020-05-28 15:31:56,177 - INFO - emitting event "successRoom" to all [/]
+2020-05-28 15:31:56,178 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["successRoom",{"userid":[2,5],"method":"delete"}]
+2020-05-28 15:31:56,188 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet MESSAGE data 2["leave",{"username":"Wren Fajardo","userid":"5","room":"2"}]
+2020-05-28 15:31:56,189 - INFO - received event "leave" from c20fedc9a745442c9793e2fc64480806 [/]
+2020-05-28 15:31:56,190 - INFO - c20fedc9a745442c9793e2fc64480806 is leaving room 2 [/]
+2020-05-28 15:31:56,190 - INFO - emitting event "message" to 2 [/]
+2020-05-28 15:31:57,477 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet MESSAGE data 2["join",{"username":"Wren Fajardo","userid":"5","room":"1"}]
+2020-05-28 15:31:57,477 - INFO - received event "join" from c20fedc9a745442c9793e2fc64480806 [/]
+2020-05-28 15:31:57,479 - INFO - c20fedc9a745442c9793e2fc64480806 is entering room 1 [/]
+2020-05-28 15:31:57,479 - INFO - emitting event "message" to 1 [/]
+2020-05-28 15:31:57,479 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["message","Wren Fajardo has entered the room: 1"]
+2020-05-28 15:31:57,480 - INFO - emitting event "success" to 1 [/]
+2020-05-28 15:31:57,480 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["success",{"userid":"5"}]
+2020-05-28 15:31:58,799 - INFO - emitting event "roomCreated" to all [/]
+2020-05-28 15:31:58,799 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["roomCreated"]
+2020-05-28 15:32:03,003 - INFO - emitting event "roomCreated" to all [/]
+2020-05-28 15:32:03,004 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["roomCreated"]
+2020-05-28 15:32:03,893 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet MESSAGE data 2["leave",{"username":"Wren Fajardo","userid":"5","room":"1"}]
+2020-05-28 15:32:03,894 - INFO - received event "leave" from c20fedc9a745442c9793e2fc64480806 [/]
+2020-05-28 15:32:03,894 - INFO - c20fedc9a745442c9793e2fc64480806 is leaving room 1 [/]
+2020-05-28 15:32:03,895 - INFO - emitting event "message" to 1 [/]
+2020-05-28 15:32:03,905 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet MESSAGE data 2["join",{"username":"Wren Fajardo","userid":"5","room":"3"}]
+2020-05-28 15:32:03,905 - INFO - received event "join" from c20fedc9a745442c9793e2fc64480806 [/]
+2020-05-28 15:32:03,907 - INFO - c20fedc9a745442c9793e2fc64480806 is entering room 3 [/]
+2020-05-28 15:32:03,907 - INFO - emitting event "message" to 3 [/]
+2020-05-28 15:32:03,908 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["message","Wren Fajardo has entered the room: 3"]
+2020-05-28 15:32:03,908 - INFO - emitting event "success" to 3 [/]
+2020-05-28 15:32:03,908 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["success",{"userid":"5"}]
+2020-05-28 15:32:04,078 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet PING data None
+2020-05-28 15:32:04,078 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet PONG data None
+2020-05-28 15:32:11,347 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet MESSAGE data 2["sendMessage",{"message":"wqewe","room":"3","username":"Wren Fajardo","userid":"5","time":1590643931339}]
+2020-05-28 15:32:11,347 - INFO - received event "sendMessage" from c20fedc9a745442c9793e2fc64480806 [/]
+2020-05-28 15:32:11,368 - INFO - emitting event "roomMessage" to 3 [/]
+2020-05-28 15:32:11,368 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["roomMessage",{"id":1,"userId":5,"roomId":3,"username":"Wren Fajardo","time":1590643931339,"message":"wqewe","removed":false,"edited":false}]
+2020-05-28 15:32:21,351 - INFO - emitting event "successMessage" to 3 [/]
+2020-05-28 15:32:21,351 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["successMessage",{"userid":[1,2,3,4,5]}]
+2020-05-28 15:32:26,751 - INFO - emitting event "successMessage" to 3 [/]
+2020-05-28 15:32:26,752 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet MESSAGE data 2["successMessage",{"userid":[1,2,3,4,5]}]
+2020-05-28 15:32:29,090 - INFO - c20fedc9a745442c9793e2fc64480806: Received packet PING data None
+2020-05-28 15:32:29,090 - INFO - c20fedc9a745442c9793e2fc64480806: Sending packet PONG data None
+2020-05-28 15:33:29,102 - INFO - c20fedc9a745442c9793e2fc64480806: Client is gone, closing socket
+2020-05-28 15:40:47,759 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 15:40:47,877 - INFO -  * Restarting with stat
+2020-05-28 15:40:48,792 - INFO - Server initialized for gevent.
+2020-05-28 15:43:34,122 - INFO - Server initialized for gevent.
+2020-05-28 15:44:44,204 - INFO - Server initialized for gevent.
+2020-05-28 15:44:44,587 - INFO -  * Restarting with stat
+2020-05-28 15:44:45,371 - INFO - Server initialized for gevent.
+2020-05-28 15:44:45,644 - WARNING -  * Debugger is active!
+2020-05-28 15:44:45,650 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 15:44:59,529 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Sending packet OPEN data {'sid': '0b28ea57814741d0b9e6cc40eefcfd8b', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-05-28 15:44:59,531 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Sending packet MESSAGE data 0
+2020-05-28 15:45:20,277 - INFO - c9ae74561fe448a88101b1d0768de7c5: Sending packet OPEN data {'sid': 'c9ae74561fe448a88101b1d0768de7c5', 'upgrades': [], 'pingTimeout': 60000, 'pingInterval': 25000}
+2020-05-28 15:45:20,278 - INFO - c9ae74561fe448a88101b1d0768de7c5: Sending packet MESSAGE data 0
+2020-05-28 15:45:24,845 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Received packet PING data None
+2020-05-28 15:45:24,845 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Sending packet PONG data None
+2020-05-28 15:45:46,039 - INFO - c9ae74561fe448a88101b1d0768de7c5: Received packet PING data None
+2020-05-28 15:45:46,040 - INFO - c9ae74561fe448a88101b1d0768de7c5: Sending packet PONG data None
+2020-05-28 15:45:50,028 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Received packet PING data None
+2020-05-28 15:45:50,028 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Sending packet PONG data None
+2020-05-28 15:46:12,048 - INFO - c9ae74561fe448a88101b1d0768de7c5: Received packet PING data None
+2020-05-28 15:46:12,048 - INFO - c9ae74561fe448a88101b1d0768de7c5: Sending packet PONG data None
+2020-05-28 15:46:16,030 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Received packet PING data None
+2020-05-28 15:46:16,030 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Sending packet PONG data None
+2020-05-28 15:46:38,042 - INFO - c9ae74561fe448a88101b1d0768de7c5: Received packet PING data None
+2020-05-28 15:46:38,042 - INFO - c9ae74561fe448a88101b1d0768de7c5: Sending packet PONG data None
+2020-05-28 15:46:42,032 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Received packet PING data None
+2020-05-28 15:46:42,033 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Sending packet PONG data None
+2020-05-28 15:47:04,035 - INFO - c9ae74561fe448a88101b1d0768de7c5: Received packet PING data None
+2020-05-28 15:47:04,035 - INFO - c9ae74561fe448a88101b1d0768de7c5: Sending packet PONG data None
+2020-05-28 15:47:08,023 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Received packet PING data None
+2020-05-28 15:47:08,024 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Sending packet PONG data None
+2020-05-28 15:47:30,052 - INFO - c9ae74561fe448a88101b1d0768de7c5: Received packet PING data None
+2020-05-28 15:47:30,053 - INFO - c9ae74561fe448a88101b1d0768de7c5: Sending packet PONG data None
+2020-05-28 15:47:59,533 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Client is gone, closing socket
+2020-05-28 15:47:59,534 - INFO - 0b28ea57814741d0b9e6cc40eefcfd8b: Client is gone, closing socket
+2020-05-28 15:48:24,499 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 15:48:24,576 - INFO -  * Restarting with stat
+2020-05-28 15:48:25,427 - INFO - Server initialized for gevent.
+2020-05-28 15:48:25,696 - WARNING -  * Debugger is active!
+2020-05-28 15:48:25,704 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 15:48:43,180 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 15:48:43,248 - INFO -  * Restarting with stat
+2020-05-28 15:48:44,010 - INFO - Server initialized for gevent.
+2020-05-28 15:48:44,258 - WARNING -  * Debugger is active!
+2020-05-28 15:48:44,263 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 16:09:41,209 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 16:09:41,289 - INFO -  * Restarting with stat
+2020-05-28 16:09:42,171 - INFO - Server initialized for gevent.
+2020-05-28 16:09:42,420 - WARNING -  * Debugger is active!
+2020-05-28 16:09:42,426 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 16:16:47,756 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 16:16:47,820 - INFO -  * Restarting with stat
+2020-05-28 16:16:48,628 - INFO - Server initialized for gevent.
+2020-05-28 16:16:48,872 - WARNING -  * Debugger is active!
+2020-05-28 16:16:48,877 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 16:18:39,982 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 16:18:40,052 - INFO -  * Restarting with stat
+2020-05-28 16:18:40,862 - INFO - Server initialized for gevent.
+2020-05-28 16:18:41,107 - WARNING -  * Debugger is active!
+2020-05-28 16:18:41,112 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 16:56:34,469 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 16:56:34,575 - INFO -  * Restarting with stat
+2020-05-28 16:56:35,386 - INFO - Server initialized for gevent.
+2020-05-28 16:56:35,660 - WARNING -  * Debugger is active!
+2020-05-28 16:56:35,665 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 17:03:08,452 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 17:03:08,516 - INFO -  * Restarting with stat
+2020-05-28 17:03:09,338 - INFO - Server initialized for gevent.
+2020-05-28 17:03:09,581 - WARNING -  * Debugger is active!
+2020-05-28 17:03:09,586 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 17:28:39,026 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 17:28:39,098 - INFO -  * Restarting with stat
+2020-05-28 17:28:39,850 - INFO - Server initialized for gevent.
+2020-05-28 17:28:40,087 - WARNING -  * Debugger is active!
+2020-05-28 17:28:40,092 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 17:34:16,334 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 17:34:16,397 - INFO -  * Restarting with stat
+2020-05-28 17:34:17,167 - INFO - Server initialized for gevent.
+2020-05-28 17:34:17,406 - WARNING -  * Debugger is active!
+2020-05-28 17:34:17,412 - INFO -  * Debugger PIN: 255-644-569
+2020-05-28 17:36:40,763 - INFO -  * Detected change in 'C:\\Users\\User\\Desktop\\2020AUT-Software-Engineering-Studio-2B\\backend\\app\\tasks.py', reloading
+2020-05-28 17:36:40,824 - INFO -  * Restarting with stat
+2020-05-28 17:36:41,591 - INFO - Server initialized for gevent.
+2020-05-28 17:36:41,816 - WARNING -  * Debugger is active!
+2020-05-28 17:36:41,822 - INFO -  * Debugger PIN: 255-644-569
