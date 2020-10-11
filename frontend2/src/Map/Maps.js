@@ -11,7 +11,6 @@ import Select from "@material-ui/core/Select";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 
-
 const mapStyles = {
   width: "100%",
   height: "100%",
@@ -26,17 +25,17 @@ class Maps extends Component {
       currentLatLng: {
         lat: 0,
         lng: 0,
+        zoom: 15,
       },
       readyMap: false,
     };
 
     this.createTask = this.createTask.bind(this);
-
   }
 
   componentDidMount() {
     this.delayedShowMarker();
-    this.createTask();
+    // this.createTask();
   }
 
   componentWillUpdate() {
@@ -44,7 +43,18 @@ class Maps extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({ distance: event.target.value });
+    let distance = event.target.value;
+    this.setState({ distance: distance });
+
+    if (distance == 10) {
+      this.setState({ zoom: 13 });
+    } else if (distance == 30) {
+      this.setState({ zoom: 12 });
+    } else if (distance == 50) {
+      this.setState({ zoom: 11 });
+    } else {
+      this.setState({ zoom: 15 });
+    }
   };
 
   delayedShowMarker = () => {
@@ -79,13 +89,13 @@ class Maps extends Component {
 
   createTask() {
     axios
-      .post("/createTask"
-      // , {
-      //   name: "Dasdasdasd",
-      //   title: "Dasdasdasd",
-      //   description: "Dasdasdasd",
-      // }
-      
+      .post(
+        "/createTask"
+        // , {
+        //   name: "Dasdasdasd",
+        //   title: "Dasdasdasd",
+        //   description: "Dasdasdasd",
+        // }
       )
       .then(
         (res) => {
@@ -101,81 +111,80 @@ class Maps extends Component {
     return (
       <div style={{ marginTop: "10vh" }}>
         <Grid container spacing={3} style={{ margin: "1vw" }}>
-          <Grid item xs={12} md={3}></Grid>
-
-          <Grid item xs={12} md={3}>
-            <InputLabel id="latitude">Latitude</InputLabel>
-            <TextField
-              label="Dense"
-              id="outlined-margin-dense"
-              defaultValue="0.0"
-              margin="dense"
-              variant="outlined"
-            />
-
-            <InputLabel style={{ fontSize: "10px" }}>
-              Click on the map to obtain a lat and a long then click Report!
-            </InputLabel>
-          </Grid>
-
-          <Grid item xs={12} md={3}>
-            <InputLabel id="longitude">Longitude</InputLabel>
-            <TextField
-              label="Dense"
-              id="outlined-margin-dense"
-              defaultValue="0.0"
-              margin="dense"
-              variant="outlined"
-            />
-          </Grid>
-
-          <Grid
-            item
-            xs={12}
-            md={3}
-            style={{ alignItems: "center", display: "flex" }}
-          >
-            <Button variant="contained" color="primary">
-              Report Covid Case
-            </Button>
-          </Grid>
-        </Grid>
-
-        <Grid container spacing={3} style={{ margin: "1vw" }}>
-          <Grid item xs={12} md={3}></Grid>
-
-          <Grid item xs={12} md={3}></Grid>
-
-          <Grid item xs={12} md={3}>
-            <InputLabel id="demo-simple-select-outlined-label">
-              Distance
-            </InputLabel>
-            <Select
-              id="demo-simple-select-outlined"
-              variant="outlined"
-              value={this.state.distance}
-              onChange={this.handleChange}
-              style={{ minWidth: "12vw" }}
-              margin="dense"
+          <Grid item container xs={12} md={9} className="gridCenterItem">
+            <Grid
+              item
+              xs={12}
+              md={3}
+              className="gridCenterItem"
+              style={{ marginRight: "1vw" }}
             >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>10km</MenuItem>
-              <MenuItem value={20}>20km</MenuItem>
-              <MenuItem value={30}>30km</MenuItem>
-            </Select>
+              <InputLabel id="latitude">Latitude</InputLabel>
+              <TextField
+                label="Dense"
+                id="outlined-margin-dense"
+                defaultValue="0.0"
+                margin="dense"
+                variant="outlined"
+                fullWidth={true}
+              />
+
+              <InputLabel style={{ fontSize: "10px" }}>
+                Click on the map to obtain a lat and a long then click Report!
+              </InputLabel>
+            </Grid>
+
+            <Grid
+              item
+              xs={12}
+              md={3}
+              className="gridCenterItem"
+              style={{ marginRight: "1vw" }}
+            >
+              <InputLabel id="longitude">Longitude</InputLabel>
+              <TextField
+                label="Dense"
+                id="outlined-margin-dense"
+                defaultValue="0.0"
+                margin="dense"
+                variant="outlined"
+                fullWidth={true}
+              />
+            </Grid>
+
+            <Grid
+              item
+              xs={12}
+              md={3}
+              style={{ alignItems: "center", display: "flex" }}
+            >
+              <Button variant="contained" color="primary">
+                Report Covid Case
+              </Button>
+            </Grid>
           </Grid>
 
-          <Grid
-            item
-            xs={12}
-            md={3}
-            style={{ alignItems: "flex-end", display: "flex" }}
-          >
-            <Button variant="contained" color="primary">
-              Filter
-            </Button>
+          <Grid item xs={12} md={3} className="gridCenterItem">
+            <Grid item xs={12} md={12} className="gridCenterItem">
+              <InputLabel id="demo-simple-select-outlined-label">
+                Distance
+              </InputLabel>
+              <Select
+                id="demo-simple-select-outlined"
+                variant="outlined"
+                value={this.state.distance}
+                onChange={this.handleChange}
+                style={{ minWidth: "12vw" }}
+                margin="dense"
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>10km</MenuItem>
+                <MenuItem value={30}>30km</MenuItem>
+                <MenuItem value={50}>50km</MenuItem>
+              </Select>
+            </Grid>
           </Grid>
         </Grid>
 
@@ -183,7 +192,7 @@ class Maps extends Component {
           {this.state.readyMap ? (
             <Map
               google={this.props.google}
-              zoom={15}
+              zoom={this.state.zoom}
               style={mapStyles}
               initialCenter={{
                 lat: this.state.currentLatLng.lat,
