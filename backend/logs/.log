@@ -1,2 +1,2 @@
-2020-10-06 22:30:21,495 - INFO - Server initialized for gevent.
-2020-10-06 22:30:22,059 - INFO -  * Restarting with stat
+2020-10-11 16:13:52,170 - INFO - Server initialized for eventlet.
+2020-10-11 16:13:52,418 - INFO -  * Restarting with stat

@@ -9,6 +9,8 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import axios from "axios";
+
 
 const mapStyles = {
   width: "100%",
@@ -27,10 +29,14 @@ class Maps extends Component {
       },
       readyMap: false,
     };
+
+    this.createTask = this.createTask.bind(this);
+
   }
 
   componentDidMount() {
     this.delayedShowMarker();
+    this.createTask();
   }
 
   componentWillUpdate() {
@@ -70,6 +76,26 @@ class Maps extends Component {
     } else {
     }
   };
+
+  createTask() {
+    axios
+      .post("/createTask"
+      // , {
+      //   name: "Dasdasdasd",
+      //   title: "Dasdasdasd",
+      //   description: "Dasdasdasd",
+      // }
+      
+      )
+      .then(
+        (res) => {
+          alert("Create Task Successful", res);
+        },
+        (error) => {
+          alert("Create Task Error", error);
+        }
+      );
+  }
 
   render() {
     return (
