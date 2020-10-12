@@ -16,6 +16,8 @@ import News from "./News/News";
 
 import Maps from "./Map/Maps";
 
+import Table from "./Table/Table";
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -25,6 +27,7 @@ ReactDOM.render(
         <Route exact path="/" component={Maps} />
         <Route exact path="/News" component={News} />
         <Route exact path="/Home" component={Home} />
+        <Route exact path="/Table" component={Table} />
       </Switch>
     </Router>
   </React.StrictMode>,

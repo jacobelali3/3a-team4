@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import "table.css";
+
 
 
 class Table extends Component {
@@ -11,16 +11,19 @@ class Table extends Component {
   
 
   componentDidMount() {
-    const url = 'https://data.nsw.gov.au/data/api/3/action/datastore_search?resource_id=21304414-1ff1-4243-a5d2-f52778048b29&limit=5';
+    const url = 'https://api.covid19api.com/summary';
     const req = new Request(url);
     const tableList = document.querySelector('.table-list');
     fetch(req)
-    .then((response)=> {return response.json()}).then((data)=>{console.log(data)
-       data.result.forEach(results =>{
+    .then((response)=> {return response.json()}).then((data)=>{console.log(data);
+       data.Countries.forEach(Countries =>{
            let li = document.createElement('li');
            let a = document.createElement('a');
-           a.textContent = results.records.postcode;
+           let b = document.createElement('a');
+           a.textContent = Countries.TotalConfirmed;
+           b.textContent = Countries.Country;
            li.appendChild(a);
+           li.appendChild(b);
            tableList.appendChild(li);
            
            

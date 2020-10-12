@@ -21,11 +21,11 @@ class News extends Component {
 	}
 
 	componentDidMount() {
-		var date = moment().subtract(7, "days").format("YYYY-M-D");
+		var date = moment().subtract(14, "days").format("YYYY-M-D");
 
 		const url =
 			"http://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?" +
-			'qInTitle="virus" AND ("australia" OR "Sydney" OR "nsw" OR "victoria")&' +
+			'qInTitle="covid" AND ("australia" OR "Sydney" OR "nsw" OR "victoria")&' +
 			"from=" +
 			date +
 			"&" +
@@ -34,6 +34,7 @@ class News extends Component {
 			"language=en&" +
 			"apiKey=93fa47f73b0544e2a927b0a0d8d6db98";
 		const req = new Request(url);
+
 		// const newsList = document.querySelector(".news-list");
 		fetch(req)
 			.then((response) => {
@@ -57,7 +58,8 @@ class News extends Component {
 					a.textContent = article.title;
 					c.textContent = article.description;
 					li.appendChild(a);
-
+				
+					
 					/* newsList.appendChild(li);
 					newsList.appendChild(b);
 					newsList.appendChild(c);
