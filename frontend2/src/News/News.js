@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "../App.css";
 import "./news.css";
 import moment from "moment";
+import Footer from '../footer'
 
 import Grid from "@material-ui/core/Grid";
 import {
@@ -82,9 +83,9 @@ class News extends Component {
 	render() {
 		return (
 			<div>
-				<div>
-					<h1>Today's COVID News </h1>
-				</div>
+				<div class="header" style={{ marginTop: "10vh" }}>
+     			 <h1>Today's NSW News</h1>
+    			</div>
 
 				{/* <div class="container">
 					<ul class="news-list"></ul>
@@ -144,6 +145,7 @@ class News extends Component {
 						</Grid>
 					))}
 				</Grid>
+				<Footer/>
 			</div>
 		);
 	}

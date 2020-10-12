@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Footer from './footer'
 import {
   BrowserRouter as Router,
   Route,
@@ -55,17 +56,9 @@ class App extends Component {
                     >
                       Maps
                     </a>
-                  </li>
+                  </li> 
+                  {/*
                   <li style={{ cursor: "pointer" }} class="nav-item">
-                    <a
-                      style={{ cursor: "pointer" }}
-                      class="nav-link"
-                      style={this.state.style_global_color}
-                      href="/"
-                    >
-                      Maps
-                    </a>
-                  </li> <li style={{ cursor: "pointer" }} class="nav-item">
                     <a
                       style={{ cursor: "pointer" }}
                       class="nav-link"
@@ -75,6 +68,7 @@ class App extends Component {
                       Table
                     </a>
                   </li>
+                  */}
                   <li class="nav-item">
                     <a
                       class="nav-link"
