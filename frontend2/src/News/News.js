@@ -81,16 +81,17 @@ class News extends Component {
 
 	render() {
 		return (
-			<div>
-				<div>
+			<div style={{ padding: 25 }}>
+				<div style={{ marginTop: 50, marginBottom: 25 }}>
 					<h1>Today's COVID News </h1>
 				</div>
+				<div />
 
 				{/* <div class="container">
 					<ul class="news-list"></ul>
 				</div> */}
 
-				<Grid container spacing={4} style={{ padding: 24 }}>
+				<Grid container spacing={4}>
 					{this.state.cardItems.map((item, index) => (
 						<Grid item xs={12} sm={6} md={4} xl={3}>
 							<Card style={{ minWidth: 285 }}>
