@@ -43,7 +43,28 @@
 }
 
 .second-text {
-    flex: 0 55%;
     margin-top: 120px;
 }
 
+@media (max-width: 767px){
+    .home-row {
+        display: block;
+        margin: 10px 0;
+    }
+    .second-image img {
+        display: none;
+    }
+    .second {
+        margin: 0;
+    }
+    .second-text {
+       
+        margin-top: 0;
+    }
+}
+
+@media _(min-width: 768px){
+    .second-text {
+        flex: 0 1 55%;
+    }
+}

@@ -3,3 +3,8 @@
 2020-10-17 23:51:44,468 - INFO - Server initialized for eventlet.
 2020-10-17 23:51:44,720 - WARNING -  * Debugger is active!
 2020-10-17 23:51:44,726 - INFO -  * Debugger PIN: 255-644-569
+2020-10-18 00:10:25,471 - INFO - Server initialized for eventlet.
+2020-10-18 00:10:25,746 - INFO -  * Restarting with stat
+2020-10-18 00:10:26,647 - INFO - Server initialized for eventlet.
+2020-10-18 00:10:26,881 - WARNING -  * Debugger is active!
+2020-10-18 00:10:26,887 - INFO -  * Debugger PIN: 255-644-569
