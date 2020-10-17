@@ -11,6 +11,12 @@ import Select from "@material-ui/core/Select";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import axios from "axios";
 
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+
 const mapStyles = {
   width: "100%",
   height: "100%",
@@ -27,10 +33,20 @@ class Maps extends Component {
         lng: 0,
         zoom: 15,
       },
+      clickedMarker: {
+        lat: 0,
+        lng: 0,
+        zoom: 15,
+      },
+      open: false,
       readyMap: false,
     };
 
+    this.mapClicked = this.mapClicked.bind(this);
+
     this.createTask = this.createTask.bind(this);
+
+    this.reportCovidCase = this.reportCovidCase.bind(this);
   }
 
   componentDidMount() {
@@ -39,8 +55,12 @@ class Maps extends Component {
   }
 
   componentWillUpdate() {
-    this.getGeoLocation();
+    this.delayedShowMarker();
   }
+
+  toggleModal = () => {
+    this.setState({ open: !this.state.open });
+  };
 
   handleChange = (event) => {
     let distance = event.target.value;
@@ -60,14 +80,13 @@ class Maps extends Component {
   delayedShowMarker = () => {
     setTimeout(() => {
       this.getGeoLocation();
-    }, 5000);
+    }, 2000);
   };
 
   getGeoLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          console.log(position.coords);
           this.setState((prevState) => ({
             currentLatLng: {
               ...prevState.currentLatLng,
@@ -84,6 +103,7 @@ class Maps extends Component {
         { enableHighAccuracy: true }
       );
     } else {
+      alert("Get current location error");
     }
   };
 
@@ -107,7 +127,44 @@ class Maps extends Component {
       );
   }
 
+  reportCovidCase() {
+    axios
+      .post("/reportCovidCase", {
+        first_name: document.getElementById("first_name").value,
+        last_name: document.getElementById("last_name").value,
+        mobile: document.getElementById("mobile").value,
+        lat: this.state.clickedMarker.lat,
+        lng: this.state.clickedMarker.lng,
+      })
+      .then(
+        (res) => {
+          alert("Create Covid Case Successful", res);
+        },
+        (error) => {
+          alert("Create Covid Error", error);
+        }
+      );
+
+    this.toggleModal();
+  }
+
+  mapClicked(mapProps, map, clickEvent) {
+    console.log("CLICKEVENT", clickEvent.latLng.lat(), clickEvent.latLng.lng());
+    this.setState({
+      clickedMarker: {
+        lat: clickEvent.latLng.lat(),
+        lng: clickEvent.latLng.lng(),
+      },
+    });
+  }
+
   render() {
+    console.log(
+      "COORD MARKER",
+      this.state.clickedMarker.lat,
+      this.state.clickedMarker.lng
+    );
+
     return (
       <div style={{ marginTop: "10vh" }}>
         <Grid container spacing={3} style={{ margin: "1vw" }}>
@@ -123,7 +180,7 @@ class Maps extends Component {
               <TextField
                 label="Dense"
                 id="outlined-margin-dense"
-                defaultValue="0.0"
+                value={this.state.clickedMarker.lat}
                 margin="dense"
                 variant="outlined"
                 fullWidth={true}
@@ -145,10 +202,10 @@ class Maps extends Component {
               <TextField
                 label="Dense"
                 id="outlined-margin-dense"
-                defaultValue="0.0"
                 margin="dense"
                 variant="outlined"
                 fullWidth={true}
+                value={this.state.clickedMarker.lng}
               />
             </Grid>
 
@@ -158,7 +215,11 @@ class Maps extends Component {
               md={3}
               style={{ alignItems: "center", display: "flex" }}
             >
-              <Button variant="contained" color="primary">
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={this.toggleModal}
+              >
                 Report Covid Case
               </Button>
             </Grid>
@@ -198,16 +259,17 @@ class Maps extends Component {
                 lat: this.state.currentLatLng.lat,
                 lng: this.state.currentLatLng.lng,
               }}
+              onClick={this.mapClicked}
             >
-              <Marker
-                title={"The marker`s title will appear as a tooltip."}
-                name={"SOMA"}
-                position={this.state.currentLatLng}
-              />
-
               <InfoWindow position={this.state.currentLatLng} visible>
                 <small>Current Location </small>
               </InfoWindow>
+
+              <Marker
+                label={"Report Case"}
+                name={"Report Case"}
+                position={this.state.clickedMarker}
+              />
             </Map>
           ) : (
             <div
@@ -221,6 +283,67 @@ class Maps extends Component {
             </div>
           )}
         </div>
+
+        <Dialog
+          open={this.state.open}
+          onClose={this.toggleModal}
+          aria-labelledby="responsive-dialog-title"
+          fullWidth={true}
+          maxWidth="sm"
+        >
+          <DialogTitle
+            id="responsive-dialog-title"
+            style={{ textAlign: "center" }}
+          >
+            Report Covid Case
+          </DialogTitle>
+          <DialogContent>
+            <Grid container spacing={5} style={{ padding: 50 }}>
+              <Grid item xs={12}>
+                <TextField
+                  label="First Name"
+                  id="first_name"
+                  variant="outlined"
+                  size="small"
+                  fullWidth={true}
+                />
+              </Grid>
+
+              <Grid item xs={12}>
+                <TextField
+                  label="Last Name"
+                  id="last_name"
+                  variant="outlined"
+                  size="small"
+                  fullWidth={true}
+                />
+              </Grid>
+
+              <Grid item xs={12}>
+                <TextField
+                  label="Contact Number"
+                  id="mobile"
+                  variant="outlined"
+                  size="small"
+                  fullWidth={true}
+                />
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                style={{ justifyContent: "center", display: "flex" }}
+              >
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={this.reportCovidCase}
+                >
+                  Report
+                </Button>
+              </Grid>
+            </Grid>
+          </DialogContent>
+        </Dialog>
       </div>
     );
   }

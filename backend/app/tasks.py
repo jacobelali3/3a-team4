@@ -14,37 +14,28 @@ bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 
 
-@app.route('/createTask', methods=['POST'])
-def CreateTask():
+@app.route('/reportCovidCase', methods=['POST'])
+def reportCovidCase():
     if request.method == 'POST':
         if not request.is_json:
             return jsonify({"msg": "Not a proper JSON"}), 400
 
         print(request.json)
 
-        name = request.json.get('name')
-        title = request.json.get('title')
-        description = request.json.get('description')
-        assignerID = request.json.get('assignerID')
-        assignedIDS = request.json.get('assignedIDS')
+        first_name = request.json.get('first_name')
+        last_name = request.json.get('last_name')
+        mobile = request.json.get('mobile')
+        lat = request.json.get('lat')
+        lng = request.json.get('lng')
 
-        print(name, title, description, assignerID, assignedIDS)
-
-        # store user data in db
-        task = models.Tasks(name=name, title=title, description=description,
-                            assignerID=assignerID)
+        covidCase = models.CovidCases(first_name=first_name, last_name=last_name, mobile=mobile,
+                                      lat=lat, lng=lng)
         try:
-            for ID in assignedIDS:
-                print(ID)
-                user = models.User.query.filter_by(id=ID).first()
-                # create associative object first
-                usertasks = models.UserTask(user, task, 0, 0)
-                user.tasks.append(usertasks)
-                database.db_session.add(user)
+            database.db_session.add(covidCase)
             database.db_session.commit()  # SA will insert a relationship row
         except:
-            return jsonify({"msg": "Cannot create Task"}), 500
-        return jsonify({"msg": "Task Created"}), 200
+            return jsonify({"msg": "Cannot Create Covid Case"}), 500
+        return jsonify({"msg": "Covid Case Created"}), 200
 
 
 @app.route("/getCreatedTasks", methods=['POST'])
