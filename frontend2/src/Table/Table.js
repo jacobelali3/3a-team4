@@ -1,54 +1,36 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import "../App.css";
-
+import moment from "moment";
 
 
 class Table extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = { tableList: [] };
   }
   
 
   componentDidMount() {
-    const url = 'https://api.covid19api.com/summary';
+    var date = moment().subtract(10, "days").format("YYYY-MM-DD");
+    var dateCurr = moment().format("YYYY-MM-DD");
+    const url = "https://api.covid19api.com/country/australia/status/confirmed?from=" + date + 
+    "T00:00:00Z&to=" + dateCurr + "T00:00:00Z";
     const req = new Request(url);
-    const tableList = document.querySelector('.table-list');
     fetch(req)
     .then((response)=> {return response.json()}).then((data)=>{console.log(data);
-       data.Countries.forEach(Countries =>{
-           let li = document.createElement('li');
-           let a = document.createElement('a');
-           let b = document.createElement('a');
-           a.textContent = Countries.TotalConfirmed;
-           b.textContent = Countries.Country;
-           li.appendChild(a);
-           li.appendChild(b);
-           tableList.appendChild(li);
-           
-           
-           /*var img = new Image(); 
-           img.setAttribute('href', article.url);
-            img.src =  article.urlToImage; 
-            document.getElementById('body').appendChild(img); */
-
-           
+       
         })
             
-        });
+        
   
 }
     render(){
        return(
-           <div>
+           
                <h1>Table</h1>
-        <div 
-        class="container"> 
-        <ul class="table-list"></ul>
         
-        </div>
-        </div>
        );
       }
 }
+
 export default Table;
