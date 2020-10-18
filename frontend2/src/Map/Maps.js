@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
+import {
+  Map,
+  GoogleApiWrapper,
+  Marker,
+  InfoWindow,
+  HeatMap,
+} from "google-maps-react";
 
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -17,11 +23,30 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
+const gradient = [
+  "rgba(0, 255, 255, 0)",
+  "rgba(0, 255, 255, 1)",
+  "rgba(0, 191, 255, 1)",
+  "rgba(0, 127, 255, 1)",
+  "rgba(0, 63, 255, 1)",
+  "rgba(0, 0, 255, 1)",
+  "rgba(0, 0, 223, 1)",
+  "rgba(0, 0, 191, 1)",
+  "rgba(0, 0, 159, 1)",
+  "rgba(0, 0, 127, 1)",
+  "rgba(63, 0, 91, 1)",
+  "rgba(127, 0, 63, 1)",
+  "rgba(191, 0, 31, 1)",
+  "rgba(255, 0, 0, 1)",
+];
+
 const mapStyles = {
   width: "100%",
   height: "100%",
   position: "relative",
 };
+
+let position = [];
 
 class Maps extends Component {
   constructor(props) {
@@ -40,22 +65,23 @@ class Maps extends Component {
       },
       open: false,
       readyMap: false,
+      positions: [],
+      finishPos: false,
+      reportedCovidCases: [],
     };
 
     this.mapClicked = this.mapClicked.bind(this);
 
-    this.createTask = this.createTask.bind(this);
+    this.getCovidCases = this.getCovidCases.bind(this);
 
     this.reportCovidCase = this.reportCovidCase.bind(this);
+    this.getReportedCovidCases = this.getReportedCovidCases.bind(this);
   }
 
   componentDidMount() {
     this.delayedShowMarker();
-    // this.createTask();
-  }
-
-  componentWillUpdate() {
-    this.delayedShowMarker();
+    this.getCovidCases();
+    this.getReportedCovidCases();
   }
 
   toggleModal = () => {
@@ -81,6 +107,8 @@ class Maps extends Component {
     setTimeout(() => {
       this.getGeoLocation();
     }, 2000);
+
+    setTimeout(() => {}, 2000);
   };
 
   getGeoLocation = () => {
@@ -107,24 +135,28 @@ class Maps extends Component {
     }
   };
 
-  createTask() {
-    axios
-      .post(
-        "/createTask"
-        // , {
-        //   name: "Dasdasdasd",
-        //   title: "Dasdasdasd",
-        //   description: "Dasdasdasd",
-        // }
-      )
-      .then(
-        (res) => {
-          alert("Create Task Successful", res);
-        },
-        (error) => {
-          alert("Create Task Error", error);
+  getCovidCases() {
+    const req = new Request(
+      "https://api.covid19api.com/live/country/aus/status/confirmed"
+    );
+    fetch(req)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        let pos = [];
+
+        {
+          data.map((item, index) =>
+            position.push({
+              lat: parseFloat(item.Lat),
+              lng: parseFloat(item.Lon),
+            })
+          );
         }
-      );
+
+        console.log(position);
+      });
   }
 
   reportCovidCase() {
@@ -139,6 +171,11 @@ class Maps extends Component {
       .then(
         (res) => {
           alert("Create Covid Case Successful", res);
+          this.setState({ readyMap: false });
+
+          this.delayedShowMarker();
+          this.getCovidCases();
+          this.getReportedCovidCases();
         },
         (error) => {
           alert("Create Covid Error", error);
@@ -146,6 +183,17 @@ class Maps extends Component {
       );
 
     this.toggleModal();
+  }
+
+  getReportedCovidCases() {
+    axios.get("/getReportedCases").then(
+      (res) => {
+        this.setState({ reportedCovidCases: res.data });
+      },
+      (error) => {
+        alert("GET REPORTED CASES FAILED", error);
+      }
+    );
   }
 
   mapClicked(mapProps, map, clickEvent) {
@@ -159,11 +207,7 @@ class Maps extends Component {
   }
 
   render() {
-    console.log(
-      "COORD MARKER",
-      this.state.clickedMarker.lat,
-      this.state.clickedMarker.lng
-    );
+    console.log("", position);
 
     return (
       <div style={{ marginTop: "10vh" }}>
@@ -252,6 +296,8 @@ class Maps extends Component {
         <div>
           {this.state.readyMap ? (
             <Map
+              className="map"
+              style={{ height: "100%", position: "relative", width: "100%" }}
               google={this.props.google}
               zoom={this.state.zoom}
               style={mapStyles}
@@ -261,14 +307,30 @@ class Maps extends Component {
               }}
               onClick={this.mapClicked}
             >
-              <InfoWindow position={this.state.currentLatLng} visible>
-                <small>Current Location </small>
-              </InfoWindow>
+              <Marker
+                label={"Current Location"}
+                name={"Current Location"}
+                position={this.state.currentLatLng}
+              />
 
               <Marker
                 label={"Report Case"}
                 name={"Report Case"}
                 position={this.state.clickedMarker}
+              />
+
+              <HeatMap
+                gradient={gradient}
+                opacity={0.3}
+                positions={position}
+                radius={20}
+              />
+
+              <HeatMap
+                gradient={gradient}
+                opacity={0.3}
+                positions={this.state.reportedCovidCases}
+                radius={20}
               />
             </Map>
           ) : (
@@ -351,4 +413,5 @@ class Maps extends Component {
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyB9txFFascb8Jcj8qV6ET2mtXZtwqqzMiU",
+  libraries: ["visualization"],
 })(Maps);

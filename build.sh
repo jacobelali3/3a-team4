@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # frontend
-cd frontend
+cd frontend2
 npm install
 npm start & pids=$!
 cd ..

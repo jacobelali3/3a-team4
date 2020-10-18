@@ -38,6 +38,19 @@ def reportCovidCase():
         return jsonify({"msg": "Covid Case Created"}), 200
 
 
+@app.route('/getReportedCases', methods=['GET'])
+def getReportedCases():
+
+   cases = models.CovidCases.query.all()
+   caseList = []
+   for case in cases:
+        caseList.append({
+        'lat': case.lat,
+        'lng': case.lng,
+        })
+   return jsonify(caseList), 200
+
+
 @app.route("/getCreatedTasks", methods=['POST'])
 def getCreatedTasks():
     if request.method == 'POST':
