@@ -24,19 +24,18 @@ class Home extends Component {
     };
   }
   componentDidMount() {
-    var date = moment().subtract(2, "days").format("YYYY-MM-DD");
-    var dateCurr = moment().format("YYYY-MM-DD");
     const url = "https://api.covid19api.com/summary"
     const req = new Request(url);
     fetch(req)
     .then((response)=> {return response.json()}).then((data)=>{
         console.log(data);
+        const select = 8;
     this.setState({data: data});
-    this.setState({TotalCases: data.Countries[8].TotalConfirmed});
-    this.setState({TotalDeaths: data.Countries[8].TotalDeaths});
-    this.setState({TotalRecovered: data.Countries[8].TotalRecovered});
-    this.setState({NewCases: data.Countries[8].NewConfirmed});
-    this.setState({NewRecovered: data.Countries[8].NewRecovered}); 
+    this.setState({TotalCases: data.Countries[select].TotalConfirmed});
+    this.setState({TotalDeaths: data.Countries[select].TotalDeaths});
+    this.setState({TotalRecovered: data.Countries[select].TotalRecovered});
+    this.setState({NewCases: data.Countries[select].NewConfirmed});
+    this.setState({NewRecovered: data.Countries[select].NewRecovered}); 
     this.setState({ActiveCases: this.state.TotalCases - (this.state.TotalDeaths + this.state.TotalRecovered)}); 
 
     
@@ -45,7 +44,8 @@ class Home extends Component {
   }
 
   render() {
-  
+    const healthlink = 'https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert'
+
     return (
     <div>
     <div class="header" style={{ marginTop: "10vh" }}>
@@ -55,22 +55,22 @@ class Home extends Component {
       <div class="home-col">
       <img src={dna} height="50"></img>
     <p>Active Cases {this.state.ActiveCases}</p>
-      <a href="/News"><img class="arrow" src={arrow} height="30"></img></a>
+      <a href={healthlink}><img class="arrow" src={arrow} height="30"></img></a>
       </div>
       <div class="home-col">
       <img src={hospital} height="50"></img>
     <p>New Recovered {this.state.NewRecovered}</p>
-      <a href="/News"><img class="arrow" src={arrow} height="30"></img></a>
+      <a href={healthlink}><img class="arrow" src={arrow} height="30"></img></a>
       </div>
       <div class="home-col">
       <img src={unknown} height="50"></img>
       <p>Total Confirmed {this.state.TotalCases}</p>
-      <a href="/News"><img class="arrow" src={arrow} height="30"></img></a>
+      <a href={healthlink}><img class="arrow" src={arrow} height="30"></img></a>
       </div>
       <div class="home-col">
       <img src={doctor} height="50"></img>
     <p>New Cases {this.state.NewCases}</p>
-      <a href="/News"><img class="arrow" src={arrow} height="30"></img></a>
+      <a href={healthlink}><img class="arrow" src={arrow} height="30"></img></a>
       </div>
     </div>
     <div class="second">
