@@ -21,7 +21,7 @@ class News extends Component {
   }
 
   componentDidMount() {
-    var date = moment().subtract(14, "days").format("YYYY-M-D");
+    var date = moment().subtract(1, "days").format("YYYY-M-D");
 
     const url =
       "http://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?" +
