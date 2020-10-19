@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "../App.css";
 import "./home.css";
 import dna from "./dna.png";
@@ -7,38 +7,69 @@ import unknown from "./marketing.png";
 import doctor from "./doctor.png";
 import arrow from "./arrow.png";
 import sanitise from "./sanitise.jpg";
+import moment from 'moment';
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      data:[],
+      TotalCases: 0,
+      NewCases: 0,
+      NewRecovered: 0,
+      TotalDeaths: 0,
+      TotalRecovered: 0,
+      ActiveCases: 0
+
+    };
+  }
+  componentDidMount() {
+    var date = moment().subtract(2, "days").format("YYYY-MM-DD");
+    var dateCurr = moment().format("YYYY-MM-DD");
+    const url = "https://api.covid19api.com/summary"
+    const req = new Request(url);
+    fetch(req)
+    .then((response)=> {return response.json()}).then((data)=>{
+        console.log(data);
+    this.setState({data: data});
+    this.setState({TotalCases: data.Countries[8].TotalConfirmed});
+    this.setState({TotalDeaths: data.Countries[8].TotalDeaths});
+    this.setState({TotalRecovered: data.Countries[8].TotalRecovered});
+    this.setState({NewCases: data.Countries[8].NewConfirmed});
+    this.setState({NewRecovered: data.Countries[8].NewRecovered}); 
+    this.setState({ActiveCases: this.state.TotalCases - (this.state.TotalDeaths + this.state.TotalRecovered)}); 
+
+    
+    })
+
   }
 
   render() {
+  
     return (
     <div>
     <div class="header" style={{ marginTop: "10vh" }}>
-      <h1>Today's NSW News</h1>
+      <h1>Covid Summary Australia</h1>
     </div>
     <div class="home-row">
       <div class="home-col">
       <img src={dna} height="50"></img>
-      <p>20 Active Cases</p>
+    <p>Active Cases {this.state.ActiveCases}</p>
       <a href="/News"><img class="arrow" src={arrow} height="30"></img></a>
       </div>
       <div class="home-col">
       <img src={hospital} height="50"></img>
-      <p>3 New Cases</p>
+    <p>New Recovered {this.state.NewRecovered}</p>
       <a href="/News"><img class="arrow" src={arrow} height="30"></img></a>
       </div>
       <div class="home-col">
       <img src={unknown} height="50"></img>
-      <p>0 Unknown Sources</p>
+      <p>Total Confirmed {this.state.TotalCases}</p>
       <a href="/News"><img class="arrow" src={arrow} height="30"></img></a>
       </div>
       <div class="home-col">
       <img src={doctor} height="50"></img>
-      <p>20,000 Cases</p>
+    <p>New Cases {this.state.NewCases}</p>
       <a href="/News"><img class="arrow" src={arrow} height="30"></img></a>
       </div>
     </div>
