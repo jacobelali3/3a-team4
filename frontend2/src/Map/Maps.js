@@ -37,7 +37,7 @@ class Maps extends Component {
               id="outlined-margin-dense"
               defaultValue="0.0"
               margin="dense"
-              variant="outlined"
+            
             />
 
             <InputLabel style={{ fontSize: "10px" }}>
