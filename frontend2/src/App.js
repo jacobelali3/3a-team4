@@ -46,6 +46,7 @@ class App extends Component {
                     </a>
                   </li>
 
+                
                   <li style={{ cursor: "pointer" }} class="nav-item">
                     <a
                       style={{ cursor: "pointer" }}
@@ -55,13 +56,12 @@ class App extends Component {
                     >
                       Maps
                     </a>
-                  </li>
-                  <li style={{ cursor: "pointer" }} class="nav-item">
+                  </li> <li style={{ cursor: "pointer" }} class="nav-item">
                     <a
                       style={{ cursor: "pointer" }}
                       class="nav-link"
                       style={this.state.style_global_color}
-                      href="/table.html"
+                      href="/Table"
                     >
                       Table
                     </a>

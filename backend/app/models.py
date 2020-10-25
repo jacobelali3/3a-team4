@@ -46,7 +46,6 @@ class User(Base):
     def __repr__(self):
         return '<User %r>' % (self.name)
 
-
 class Team(Base):
     __tablename__ = 'teams'
     id = Column(Integer, primary_key=True)
@@ -61,7 +60,6 @@ class Team(Base):
 
     def __repr__(self):
         return '<Team %r>' % (self.name)
-
 
 class Timesheet(Base):
     __tablename__ = 'timesheets'
@@ -127,12 +125,10 @@ class UserTask(Base):
         self.hours = hours
         self.minutes = minutes
 
-
 class Log(Base):
     __tablename__ = 'logs'
     id = Column(Integer, primary_key=True)
     datetime = Column(DateTime, unique=True, nullable=False)
-
 
 class ChatRooms(Base):
     __tablename__ = 'ChatRooms'
