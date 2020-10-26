@@ -12,3 +12,7 @@
     text-align: center;
     position: sticky;
 }
+
+.MuiGrid-container {
+    margin-top: 22px !important;
+}

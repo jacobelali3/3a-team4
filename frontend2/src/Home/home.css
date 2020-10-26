@@ -42,9 +42,6 @@
     flex: 0 40%;
 }
 
-.second-text {
-    margin-top: 120px;
-}
 
 @media (max-width: 767px){
     .home-row {
@@ -60,10 +57,12 @@
     .second-text {
        
         margin-top: 0;
+        max-width: 350px;
+        margin: auto;
     }
 }
 
-@media _(min-width: 768px){
+@media (min-width: 768px){
     .second-text {
         flex: 0 1 55%;
     }

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "../App.css";
 import "./news.css";
 import moment from "moment";
+import Footer from '../footer'
 
 import Grid from "@material-ui/core/Grid";
 import {
@@ -89,7 +90,9 @@ class News extends Component {
         {/* <div class="container">
 					<ul class="news-list"></ul>
 				</div> */}
-
+       <div class="header" style={{ marginTop: "10vh" }}>
+     			 <h1>Today's News</h1>
+            </div>
         <Grid container spacing={4} style={{ padding: 24 }}>
           {this.state.cardItems.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} xl={3}>
@@ -144,6 +147,7 @@ class News extends Component {
             </Grid>
           ))}
         </Grid>
+        <Footer/>
       </div>
     );
   }
