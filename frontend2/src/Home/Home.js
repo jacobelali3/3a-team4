@@ -8,6 +8,7 @@ import doctor from "./doctor.png";
 import arrow from "./arrow.png";
 import sanitise from "./sanitise.jpg";
 import moment from 'moment';
+import Footer from '../footer'
 
 class Home extends Component {
   constructor(props) {
@@ -85,6 +86,7 @@ class Home extends Component {
       <p>WHO 2020</p>
       </div>
     </div>
+    <Footer/>
     </div>
     )
   }
