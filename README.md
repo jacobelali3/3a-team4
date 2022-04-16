@@ -1,5 +1,5 @@
 # 2020SPR Software Studio 3A project
-This project was build for Software-Studio 3A built with Flask and React. We built a covid 19 app to assist and inform the public in Sydney, NSW. Includes, news, statistic table, chatbot and map features.
+This was a collaborative project for Software-Studio 3A at UTS, built with Flask and React. We built a covid 19 app to assist and inform the public in Sydney, NSW. Includes, news, statistic table, chatbot and map features.
 # Frontend
 
 ## steps to run
